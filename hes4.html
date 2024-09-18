@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Tags for SEO -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+
+    <!-- Linking Favicon, Apple Touch Icon, Font Awesome, AOS, Materialize & CSS -->
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        defer>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+	<style>
+body {
+  background-image: url('assets/img/bikta.jpg');
+}
+</style>
+    <!-- Title -->
+    <title>פולימרים</title>
+
+    <!-- No Script -->
+    <noscript>Please enable JavaScript to open this page.</noscript>
+
+</head>
+
+<!-- Home Page -->
+
+<body id="body">
+
+
+		<div id ="myAnimation">
+<img id="chef" src="assets/img/chef.png"   onClick="chef1()">
+		</div>
+	<div id=countdown>
+ <p id="countdown2"></p>
+	</div>
+		<div id=profile>
+ <p id="name"></p>
+<p id="points"></p>
+	</div>
+    <!-- Welcome -->
+    <div class="container mb-5">
+        <div class="row center center-align">
+            <h1 class="overlay-text center animated bounce">הצלחתם במשימה הרביעית</h1>
+        </div>
+        <div class="overlay-text animated bounce">
+            <div class="row center">
+                <!-- Heading -->
+                <h2 class="center heading-underline">הסליים</h2>
+				<h2 >יש ללחוץ על הדמות ולהפעיל את קטע הקריינות</h2>
+            </div>
+            <!-- Content -->
+            <div class="row center">
+               
+            </div>
+            <!-- GIF -->
+            <div class="row center">
+        <img class="gif1" src="https://s8.gifyu.com/images/Glitter_Slime.gif" border="0" />
+			<script language="JavaScript" type="text/javascript" src="//vhss-d.oddcast.com/voki_embed_functions.php"></script><script language="JavaScript" type="text/javascript">AC_Voki_Embed(400, 225,"a78be5ebff9de9f21d85ec04d8c9198f",17403846, 1, "", 0, 1);</script>
+            </div>
+            <!-- Note -->
+            <div class="row center">
+				<center>
+                   <h5 id="desc">
+הרבה מחומרי הניקוי מכילים את החומר בוראקס , המשמש כחומר מצלב לפולימר הקרונפלור. בצירוף הקרונפלור ומרכך השיער נקבל פולימר בעל תכונות פלסטיות ,כיוון שנוצרים קשרים שאינם קשרים כימיים חזקים במיוחד הם יכולים בקלות להתנתק וגם להיווצר כל הזמן, ולכן החומר הוא לא ממש מוצק, ואם 'קורעים' אותו הוא מתחבר חזרה.
+
+					</h5>
+				  <button class="btn btn-mystery waves-effect waves-light" id="nex2" onClick="nex1()">המשיכו במסע</button>
+					</center>
+            </div>
+        </div>
+    </div>
+
+    <!-- Just Another Div -->
+
+
+    <!-- Loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#6590D5" /></svg></div>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC7iU2AMREu59KDaybVj7dbnegysFCb-yw",
+    authDomain: "fireapp-cba38.firebaseapp.com",
+    databaseURL: "https://fireapp-cba38.firebaseio.com",
+    projectId: "fireapp-cba38",
+    storageBucket: "fireapp-cba38.appspot.com",
+    messagingSenderId: "688911945621",
+    appId: "1:688911945621:web:2d1a1adbb1f9b47ed9309c"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+		<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/hes4.js"></script>
+	<script src="https://www.youtube.com/player_api"></script>
+
+</body>
+
+</html>

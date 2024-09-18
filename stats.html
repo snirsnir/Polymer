@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+
+    <!-- Linking Favicon, Apple Touch Icon, Font Awesome, AOS, Materialize & CSS -->
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>סטטוס הקבוצות</title>
+  <link rel="stylesheet" href="assets/css/index.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="accordian.pack.js"></script>
+</head>
+
+<body>
+	<center>
+  <div id="logo" style="color:black"><h1>לוח תוצאות - בעקבות הנוזל המסתורי</h1></div>
+		</center>
+  <div dir="rtl">
+	  <center>
+<table dir="rtl" id="ex-table">
+	
+  <tr id="tr">
+	  <br> <br> <br>
+    <th>שם התלמיד</th>
+    <th>נקודות</th> 
+    
+
+ </table> 
+		  </center>
+	</div>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC7iU2AMREu59KDaybVj7dbnegysFCb-yw",
+    authDomain: "fireapp-cba38.firebaseapp.com",
+    databaseURL: "https://fireapp-cba38.firebaseio.com",
+    projectId: "fireapp-cba38",
+    storageBucket: "fireapp-cba38.appspot.com",
+    messagingSenderId: "688911945621",
+    appId: "1:688911945621:web:2d1a1adbb1f9b47ed9309c"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+<script src="assets/js/stats.js"></script>
+</body>
+</html>

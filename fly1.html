@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Tags for SEO -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+
+    <!-- Linking Favicon, Apple Touch Icon, Font Awesome, AOS, Materialize & CSS -->
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        defer>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+	<style>
+body {
+  background-image: url('assets/img/natbag.jpg');
+}
+</style>
+    <!-- Title -->
+    <title>נתב"ג</title>
+
+    <!-- No Script -->
+    <noscript>Please enable JavaScript to open this page.</noscript>
+
+</head>
+
+<!-- Home Page -->
+
+<body id="body">
+
+    <!-- Audio -->
+    <audio autoplay id="autoPlayMusic">
+        <source src="assets/audio/airport.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+ <p id="countdown"></p>
+    		<div id=profile>
+ <p id="name"></p>
+<p id="points"></p>
+	</div>
+	<div id="wait">
+    <div class="container mb-5">
+        <div class="row center center-align">
+            <h1 class="overlay-text center animated bounce">נמל תעופה בן גוריון, טרמינל 3 - טיסות יוצאות 
+</h1>
+        </div>
+        <div class="overlay-text animated bounce">
+           
+            <!-- Content -->
+            <div class="row center">
+            <div class="row center">
+                <h2>הוראות לספיגת הנוזל</h2>
+				<h5 id="nex2">יש לצפות בסרטון ולעקוב אחר ההוראות</h5>
+				 <button class="nextb btn-mystery waves-effect waves-light" id="nextb" onClick="nex1()">המשך</button>
+            </div>
+            <!-- GIF -->
+            <div class="row center">
+				<center>
+					<img id="tut" src="assets/img/tut.png"></img>
+                <div id="playerhide"></div>
+					
+</video>
+					</center>
+            </div>
+			 <div class="row center" id="ansdiv">
+				 <button class="nextb btn-mystery waves-effect waves-light" id="answer" onClick="lastbutton()">סיימתי</button>
+				             <h1 style="color:red;" id="wrong"></h1>
+				 <h1 style="color:greenyellow;" id="correct">!כל הכבוד</h1>
+				 <h5 id="clue1">רמז 1: ניצול הידע המוקדם על חומרים, מולקולות, בישול ויצירתיות כיד הדמיון </h5>
+				 <h5 id="clue2">רמז 2: הכנת מאכלים תוך שימוש בתהליכים כימיים, המתרחשים בעת בישול מזון</h5>
+				 <h5 style="color:greenyellow;" id="correctans"></h1>
+				<center>  <button class="nextb btn-mystery waves-effect waves-light" id="correctanswer" onClick="lastbutton()">המשיכו 40</button></center>
+            </div>
+		
+            <!-- Note -->
+          
+        </div>
+    </div>
+</div>
+    <!-- Just Another Div -->
+
+
+    <!-- Loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#6590D5" /></svg></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+        crossorigin="anonymous"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC7iU2AMREu59KDaybVj7dbnegysFCb-yw",
+    authDomain: "fireapp-cba38.firebaseapp.com",
+    databaseURL: "https://fireapp-cba38.firebaseio.com",
+    projectId: "fireapp-cba38",
+    storageBucket: "fireapp-cba38.appspot.com",
+    messagingSenderId: "688911945621",
+    appId: "1:688911945621:web:2d1a1adbb1f9b47ed9309c"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+		<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="assets/js/fly1.js"></script>
+	<script src="https://www.youtube.com/player_api"></script>
+
+</body>
+
+</html>
